@@ -1,0 +1,42 @@
+Step 1: Data cleaning 
+* Combine data into 1 or 2 main data files 
+* 1 row for each past game 
+  * Only use rankings from previous date to avoid future info leaking
+* Possibly make new file for tournament to learn what attributes teams that make tournamnet/advance have if we want to do additional model
+
+Step 2: Unsupervised learning? 
+* Principle Component Analysis (PCA) 
+  * Provides which stats drive most varianace and which are redundant
+* Autoencoder 
+  * Train neural network autoencoder 
+  * Provides nonlinear dimesnionality reduction
+
+Step 3: Feature selection 
+* Use tree based model for feature importance 
+  * Random Forest
+  * XGBoost
+  * LightGBM
+* Get SHAP values and permutation importance 
+
+Step 4: Recent history component
+* Want model to understand streaks and momentum (especially for predicting tournmant outcome)
+* For each team before each game need:
+  * Rolling metrics from last n games
+* Could potentially weight recency for games
+* Include opponent adjusted metrics 
+
+Step 5: Contrstuct matchup dataset for submission
+* Need to make every possible outcome?
+* Confused on how to prepare data before final model and submission
+
+Step 6: Supervised model
+* Logistic regression (baseline)
+* Gradient boosting (best performance)
+  * XGBoost
+  * LightGBM
+  * CatBoost
+* ELO base model (good for tournamnet style)  
+
+
+
+
