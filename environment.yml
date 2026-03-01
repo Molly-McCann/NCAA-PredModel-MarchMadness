@@ -1,0 +1,34 @@
+name: march-madness
+channels:
+  - defaults
+
+dependencies:
+  # Python
+  - python=3.11
+
+  # Core data science
+  - numpy
+  - pandas
+  - scipy
+
+  # Machine learning
+  - scikit-learn
+
+  # Visualization
+  - matplotlib
+  - seaborn
+
+  # Notebook support
+  - jupyter
+  - ipykernel
+
+  # Utilities
+  - tqdm           # progress bars
+  - pyyaml         # config files
+
+  # pip extras
+  - pip
+  - pip:
+    - torch          # PyTorch (Apple Silicon MPS supported)
+    - torchvision
+    - optuna         # hyperparameter tuning
