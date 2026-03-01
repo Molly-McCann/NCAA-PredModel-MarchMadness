@@ -25,5 +25,8 @@ You are currently on your local feature branch
 4 - switch back to main and merge in your changes
     ~ git checkout main
     ~ git merge feature-branch
+5 - push your changes to the origin main
+    ~ git push
+
 
     
